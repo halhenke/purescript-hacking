@@ -1,0 +1,24 @@
+{
+  "name": "my-first-purescript",
+  "version": "1.0.0",
+  "description": "My First Attempt at a Purescript Project",
+  "main": "./output/Main/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "purs-loader": "^1.1.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    ";purescript"
+  ],
+  "author": "Hal Henke <halhenke@gmail.com>",
+  "license": "MIT"
+}
