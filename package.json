@@ -8,13 +8,23 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-register": "^6.11.6",
+    "eslint": "^3.3.1",
+    "eslint-config-google": "^0.6.0",
+    "purescript": "^0.9.3",
+    "purescript-psa": "^0.3.9",
     "purs-loader": "^1.1.0",
-    "webpack": "^1.13.1",
+    "source-map-loader": "^0.1.5",
+    "webpack": "^1.13.2",
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --cache .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node serve.js",
+    "web-serve": "webpack-dev-server --config webpack.config.js"    
   },
   "keywords": [
     ";purescript"

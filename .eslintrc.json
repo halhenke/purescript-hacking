@@ -1,0 +1,7 @@
+{
+  "extends": "google",
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "operator-linebreak": ["error", "before"]
+  }
+}
