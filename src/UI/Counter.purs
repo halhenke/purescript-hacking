@@ -54,6 +54,8 @@ import Data.Maybe
 data Action = Increment
 type State = Int
 
+initialState :: State
+initialState = 0
 
 spec :: T.Spec _ Int _ Action
 spec = T.simpleSpec performAction render
