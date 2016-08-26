@@ -11,6 +11,9 @@
   },
   "devDependencies": {
     "purescript-psci-support": "^1.0.0",
-    "purescript-lists": "^1.0.1"
+    "purescript-lists": "^1.0.1",
+    "purescript-thermite": "^2.0.0",
+    "purescript-preface": "^1.0.1",
+    "purescript-eff": "^1.0.0"
   }
 }
