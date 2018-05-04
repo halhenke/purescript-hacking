@@ -1,4 +1,4 @@
-module UI.CounterOther where
+module UI.Spounter where
 
 import Prelude
 import React as R
@@ -37,7 +37,7 @@ performAction :: T.PerformAction _ State _ Action
 performAction Increment _ _ = void (T.cotransform (\state -> state { counter = state.counter + 1 }))
 performAction Decrement _ _ = void (T.cotransform (\state -> state { counter = state.counter - 1 }))
 
-getIncrementValueFromServer :: Aff _ Int
+-- getIncrementValueFromServer :: Aff _ Int
 
 performAction :: T.PerformAction _ State _ Action
 performAction Increment _ _ = forever do

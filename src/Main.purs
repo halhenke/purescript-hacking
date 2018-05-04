@@ -2,7 +2,7 @@ module Main where
 
 import Prelude
 import Data.AddressBook
-import UI.Counter
+import UI.Spounter
 import React as R
 import React.DOM as RD
 import React.DOM.Props as RDP

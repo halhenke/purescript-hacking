@@ -19,25 +19,37 @@ const entry = [
 const clientConfig = {
   entry: entry,
   output: {
-    path: './build',
+    path: path.resolve('./build'),
     filename: 'bundle.js',
   },
   resolve: {
-    modulesDirectories: [ 'node_modules', 'bower_components' ],
+    // root: [
+    //   path.resolve('./src')
+    // ],
+    // modulesDirectories: [ 'node_modules', 'bower_components' ],
+    // modulesDirectories: [ 'node_modules', 'bower_components', 'src' ],
     extensions: [ '', '.purs', '.js']
   },
-  // loaders: [
-  //   // ...
-  //   {
-  //     test: /\.purs$/,
-  //     loader: 'purs-loader',
-  //     exclude: /node_modules/,
-  //     query: {
-  //       psc: 'psa',
-  //       src: ['bower_components/purescript-*/src/**/*.purs', 'src/**/*.purs'],
-  //     },
-  //   },
-  // ],
+  module: {
+    loaders: [
+      {
+        test: /\.purs/,
+        // test: /\.purs/,
+        // test: /\.purs$/,
+        loader: 'purs-loader',
+        exclude: /node_modules/,
+        query: {
+          // psc: 'psa',
+          src: ['bower_components/purescript-*/src/**/*.purs', 'src/**/*.purs'],
+          // src: ['bower_components/purescript-*/src/**/*.purs', '**/*.purs'],
+          bundle: false,
+          pscArgs: { sourceMaps: true },
+          pscIde: true
+
+        },
+      },
+    ],
+  },
   devServer: {
     hot: true,
     historyApiFallback: true,
